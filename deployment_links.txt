@@ -1,0 +1,32 @@
+#custom htaccess
+https://www.linode.com/docs/web-servers/apache/how-to-set-up-htaccess-on-apache/
+https://htaccessbook.com/add-custom-headers-htaccess/
+
+
+#Deploy angular app without node azure webapp
+https://medium.com/better-programming/deploy-angular-app-using-azure-devops-build-and-release-pipelines-f7f77ca28be4
+https://angular.io/guide/deployment
+
+
+#IP restrictions Azure Webapp
+https://gist.github.com/Swimburger/b2d58bff38156b73a5417b7f818fc5be
+https://swimburger.net/blog/azure/bulk-add-cloudflares-ips-to-azure-app-service-access-restrictions-using-az-powershell
+https://docs.microsoft.com/en-us/azure/app-service/app-service-ip-restrictions
+
+#extract files task
+https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/extract-files?view=azure-devops
+https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/copy-files?view=azure-devops&tabs=yaml
+
+
+#Deploy node app from github
+https://www.freecodecamp.org/news/how-to-deploy-your-super-cool-node-app-to-azure-from-github-47ebff6c5448/
+https://medium.com/faun/deploying-a-node-app-into-azure-web-app-fea4fb425f6d
+https://dev.to/bashirk/the-painless-way-to-deploying-your-nodejs-app-on-azure-part-2-5151
+https://ppolyzos.com/2019/01/18/publish-an-angular-web-app-to-azure-using-github-azuredevops-azure-storage-account/
+
+
+#Deploy to windows vm
+https://docs.microsoft.com/en-us/azure/devops/pipelines/apps/cd/deploy-webdeploy-iis-deploygroups?view=azure-devops
+https://azuredevopslabs.com/labs/vstsextend/deploymentgroups/
+https://medium.com/@samjwright/automating-deployments-to-on-premis-servers-with-azure-devops-bb0e6cac4656
+

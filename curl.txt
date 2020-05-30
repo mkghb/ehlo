@@ -1,0 +1,37 @@
+#url
+https://www.keycdn.com/support/popular-curl-examples
+
+#Check website response time 
+#http
+curl -s -w 'Testing Website Response Time for :%{url_effective}\n\nLookup Time:\t\t%{time_namelookup}\nConnect Time:\t\t%{time_connect}\nPre-transfer Time:\t%{time_pretransfer}\nStart-transfer Time:\t%{time_starttransfer}\n\nTotal Time:\t\t%{time_total}\n' -o /dev/null http://www.google.com
+
+#https
+curl -s -w 'Testing Website Response Time for :%{url_effective}\n\nLookup Time:\t\t%{time_namelookup}\nConnect Time:\t\t%{time_connect}\nAppCon Time:\t\t%{time_appconnect}\nRedirect Time:\t\t%{time_redirect}\nPre-transfer Time:\t%{time_pretransfer}\nStart-transfer Time:\t%{time_starttransfer}\n\nTotal Time:\t\t%{time_total}\n' -o /dev/null https://www.google.com
+
+#from a file
+curl -s -w "@format.txt" -o /dev/null http://www.google.com
+
+#Header Check
+curl -I -L http://test.example.net/servers/vnc.html
+
+#save output
+curl -O https://cdn.keycdn.com/css/animate.min.css
+
+#Testing download time without any output
+curl -D - https://www.keycdn.com/ -o /dev/null
+
+#GET
+curl --request GET https://www.keycdn.com/
+
+#Post
+curl --request POST https://yourwebsite.com/
+
+#Delete
+curl --request DELETE https://yourwebsite.com/
+
+#Put
+curl --request PUT https://yourwebsite.com/
+
+#Data request
+curl -X POST http://www.yourwebsite.com/login/ -d 'username=yourusername&password=yourpassword'
+

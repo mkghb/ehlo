@@ -1,0 +1,88 @@
+#request limits
+<configuration>
+   <system.webServer>
+      <security>
+         <requestFiltering>
+            <requestLimits>
+               <headerLimits>
+                  <add header="Content-type" sizeLimit="100" />
+               </headerLimits>
+            </requestLimits>
+         </requestFiltering>
+      </security>
+   </system.webServer>
+</configuration>
+
+#http to https
+<rewrite>
+        <rules>
+            <rule name="HTTP TO HTTPS" stopProcessing="true">
+                <match url="(.*)" />
+                <conditions>
+                    <add input="{HTTPS}" pattern="^OFF$" />
+                </conditions>
+                <action type="Redirect" url="https://{HTTP_HOST}/{R:1}" redirectType="SeeOther" />
+            </rule>
+        </rules>
+</rewrite>
+
+#ip restrictions
+<system.webServer>
+    <security>
+        <ipSecurity>
+            <add ipAddress="x.x.x.x" allowed="false" />
+        </ipSecurity>
+    </security>
+</system.webServer>
+
+#File request /requestFiltering
+<configuration>
+   <system.webServer>
+      <security>
+         <requestFiltering>
+            <fileExtensions applyToWebDAV="false">
+               <add fileExtension=".inc" allowed="false" />
+            </fileExtensions>
+         </requestFiltering>
+      </security>
+   </system.webServer>
+</configuration>
+
+#Security headerLimits
+<system.webServer>
+  <httpProtocol>
+    <customHeaders>
+      <!-- SECURITY HEADERS - https://securityheaders.io/? -->
+      <!-- Protects against Clickjacking attacks. ref.: http://stackoverflow.com/a/22105445/1233379 -->
+      <add name="X-Frame-Options" value="SAMEORIGIN" />
+      <!-- Protects against Clickjacking attacks. ref.: https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet -->
+      <add name="Strict-Transport-Security" value="max-age=31536000; includeSubDomains"/>
+      <!-- Protects against XSS injections. ref.: https://www.veracode.com/blog/2014/03/guidelines-for-setting-security-headers/ -->
+      <add name="X-XSS-Protection" value="1; mode=block" />
+      <!-- Protects against MIME-type confusion attack. ref.: https://www.veracode.com/blog/2014/03/guidelines-for-setting-security-headers/ -->
+      <add name="X-Content-Type-Options" value="nosniff" />
+      <!-- CSP modern XSS directive-based defence, used since 2014. ref.: http://content-security-policy.com/ -->
+      <add name="Content-Security-Policy" value="default-src 'self'; font-src *;img-src * data:; script-src *; style-src *;" />
+      <!-- Prevents from leaking referrer data over insecure connections. ref.: https://scotthelme.co.uk/a-new-security-header-referrer-policy/ -->
+      <add name="Referrer-Policy" value="strict-origin" />
+    </customHeaders>
+  </httpProtocol>
+</system.webServer>
+
+#CSP relaxed
+<add name="Content-Security-Policy" value="default-src 'self'; connect-src *; font-src *; frame-src *; img-src * data:; media-src *; object-src *; script-src * 'unsafe-inline' 'unsafe-eval'; style-src * 'unsafe-inline';" />
+#referrer policy
+context.Response.Headers.Add("Referrer-Policy", "no-referrer");
+#x powered by
+<remove name="X-Powered-By" />
+
+
+#remove server header
+<configuration>
+  <system.webServer>
+    <security>
+      <requestFiltering removeServerHeader="true" />
+    </security>
+  </system.webServer>
+</configuration>
+

@@ -86,3 +86,10 @@ context.Response.Headers.Add("Referrer-Policy", "no-referrer");
   </system.webServer>
 </configuration>
 
+#prevent slow Post
+ <security>
+      <dynamicIpSecurity denyAction="Forbidden">
+        <denyByRequestRate enabled="true" maxRequests="4" requestIntervalInMilliseconds="2000"/>
+        <denyByConcurrentRequests enabled="true" maxConcurrentRequests="4"/>
+      </dynamicIpSecurity>
+ </security>

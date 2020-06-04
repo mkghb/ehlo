@@ -35,3 +35,5 @@ curl --request PUT https://yourwebsite.com/
 #Data request
 curl -X POST http://www.yourwebsite.com/login/ -d 'username=yourusername&password=yourpassword'
 
+#follow redirect
+curl -svILk <url>

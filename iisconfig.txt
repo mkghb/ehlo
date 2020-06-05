@@ -125,3 +125,37 @@ context.Response.Headers.Add("Referrer-Policy", "no-referrer");
      <add enabled="false" mimeType="*/*"/>
    </staticTypes>
  </httpCompression>
+
+ #Browser Caching
+<system.webServer>
+<staticContent>
+<clientCache cacheControlMode="UseMaxAge" cacheControlMaxAge="30.00:00:00" />
+</staticContent>
+</system.webServer>
+
+<staticContent>
+    <clientCache httpExpires="Sun, 29 Mar 2020 00:00:00 GMT" cacheControlMode="UseExpires" />
+</staticContent>
+
+<staticContent>
+    <clientCache cacheControlMaxAge ="2.00:00:00" cacheControlMode="UseMaxAge" />
+</staticContent>
+
+#No cache
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <system.webServer>
+    <httpProtocol>
+      <customHeaders>
+        <add name="Cache-Control" value="no-cache" />
+      </customHeaders>
+    </httpProtocol>
+  </system.webServer>
+</configuration>
+
+#URL Compression
+<configuration>
+  <system.webServer>
+    <urlCompression doDynamicCompression="true" />
+  </system.webServer>
+</configuration>

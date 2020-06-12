@@ -1,0 +1,34 @@
+# added by Malware and Abuse due 
+#location ~* "^/wp-content/uploads/2019/05/ECCU-video-01.mp4" { return 403;} 
+
+add_header x-xss-protection "1; mode=block" always;
+add_header x-frame-options "SAMEORIGIN" always;
+add_header x-content-type-options "nosniff" always;
+add_header Referrer-Policy 'strict-origin';
+add_header Strict-Transport-Security "max-age=31536000; includeSubdomains; preload;";
+#Allowing our uptime monitor
+if ($http_user_agent = "kinsta-bot") {
+  set $is_allowed_ip yes;
+}
+  
+#Allow connections from localhost
+set $kinsta_edge_null 0;
+set $kinsta_localhost 0;
+if ($http_x_kinsta_edge_incomingip = "") { set $kinsta_edge_null 1; }
+if ($remote_addr = "127.0.0.1") { set $kinsta_localhost 1; }
+set $kinsta_is_local "$kinsta_edge_null$kinsta_localhost";
+if ($kinsta_is_local = "11") { set $is_allowed_ip yes; }
+ 
+if ($is_temporary_domain ) {
+  set $is_allowed_ip yes;
+}
+  
+#Block non-whitelisted IP addresses
+if ($is_allowed_ip = no ){
+  return 403;
+}
+location /wp-admin/load-scripts.php {
+   if ($http_x_pull) { return 405; } 
+   limit_req zone=customzone_one burst=6 nodelay;
+   try_files /noneexistentfoldereverandever @main_location;
+}

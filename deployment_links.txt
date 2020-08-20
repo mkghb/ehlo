@@ -30,3 +30,5 @@ https://docs.microsoft.com/en-us/azure/devops/pipelines/apps/cd/deploy-webdeploy
 https://azuredevopslabs.com/labs/vstsextend/deploymentgroups/
 https://medium.com/@samjwright/automating-deployments-to-on-premis-servers-with-azure-devops-bb0e6cac4656
 
+#Python for pentests
+https://github.com/x4nth055/pythoncode-tutorials

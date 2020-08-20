@@ -1,0 +1,184 @@
+2MMDLlV6y9HdnKUs/cvxhrmnzqqmjryzm
+cedar.c@eccouncil.org
+
+
+
+
+
+\Remove-DuplicateItems.ps1 : Autodiscover failed, error: Exception calling "AutodiscoverUrl" with "2" argument(s): "The 
+Autodiscover service couldn't be located."
+At line:1 char:1
++ .\Remove-DuplicateItems.ps1 -Identity akash@eccouncil.org -Type All - ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [Write-Error], WriteErrorException
+    + FullyQualifiedErrorId : Microsoft.PowerShell.Commands.WriteErrorException,Remove-DuplicateItems.ps1
+
+legal
+legal services
+
+.\Remove-DuplicateItems.ps1 -Identity mailbox@eccouncil.org -Type All -Server outlook.office365.com -Impersonation -DeleteMode SoftDelete -Mode Quick -Verbose
+
+Archive Enable for one user:
+Enable-Mailbox -identity "finance@eccouncil.org" -Archive
+9100532389 Reshma sasha 
+
+For moving mails to Archive after applying retention policy:
+Set-ExecutionPolicy Unrestricted
+$UserCredential = Get-Credential
+$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
+ Import-PSSession $Session
+ Start-ManagedFolderAssistant -Identity "rabbani@eccouncil.org"
+ Start-ManagedFolderAssistant -Identity "akash@eccouncil.org"
+ Start-ManagedFolderAssistant -Identity "ali@eccouncil.org"
+ Start-ManagedFolderAssistant -Identity "cehapp@eccouncil.org"
+ Start-ManagedFolderAssistant -Identity "danish@eccouncil.org"
+ Start-ManagedFolderAssistant -Identity "entisa@eccouncil.org"
+ Start-ManagedFolderAssistant -Identity "eric.lopez@eccouncil.org"
+ Start-ManagedFolderAssistant -Identity "partnersupport@eccouncil.org"
+ Start-ManagedFolderAssistant -Identity "sachin@eccouncil.org"
+ Start-ManagedFolderAssistant -Identity "jay@eccouncil.org"
+ Start-ManagedFolderAssistant -Identity "urmandeep@eccouncil.org"
+ Start-ManagedFolderAssistant -Identity "steve.graham@eccouncil.org"
+
+Checking organization Expanded or not:
+Get-Organizationconfig |fl *archive*
+
+For expanding Archive for Organization:
+Set-organizationConfig -AutoExpandingArchive
+
+for removing user in Deleted users:
+Remove-MsolUser -UserPrincipalName finance@eccouncil.org -RemoveFromRecycleBin -force
+
+
+VLSC
+Hours of Operation:
+5 AM – 5 PMPST Mon - Fri
+6PM-6AM
+Toll Free Number(s):
+(866) 230-0560
+
+
+
+
+M1b14-rezwa.effendy@iibcouncil.org: MigrationMRSPermanentException: Error: Unable to access account. Please ensure that IMAP access is enabled for this account. --> Imap server reported an error during LoginCommand with the following alert: ?'Please log in via your web browser: https://support.google.com/mail/accounts/answer/78754 ?(Failure)??'.
+
+M1b15- amanda.wyatt@eccouncil.org: MigrationMRSPermanentException: Error: Unable to access account. Please ensure that IMAP access is enabled for this account. --> Imap server reported an error during LoginCommand with the following alert: ?'Please log in via your web browser: https://support.google.com/mail/accounts/answer/78754 ?(Failure)??'.
+
+M1b21-certmanager@eccouncil.org:MigrationMRSPermanentException: Error: Decoding of header Subject failed; raw value: =?UNKNOWN?B?qQ==?= Preferred Payment Method =?UNKNOWN?Q?=28ATM?= CARD --> Character set name ?(UNKNOWN)? is invalid or not installed.
+
+M1b24-tim.rosenberg@eccouncil.org:MigrationMRSPermanentException: Error: The username or password for this account is incorrect. --> Imap server reported an error during LoginCommand indicating that authentication failed: ?'Invalid credentials ?(Failure)??'. 
+
+M1b25-reshmaa.kaur@iibcouncil.org:MigrationMRSPermanentException: Error: Unable to access account. Please ensure that IMAP access is enabled for this account. --> Imap server reported an error during LoginCommand with the following alert: ?'Please log in via your web browser: https://support.google.com/mail/accounts/answer/78754 ?(Failure)??'. 
+
+
+Start-ManagedFolderAssistant -Identity "eric.lopez@eccouncil.org"
+
+Set-ExecutionPolicy Unrestricted
+$UserCredential = Get-Credential
+$Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
+ Import-PSSession $Session
+ Start-ManagedFolderAssistant -Identity "rabbani@eccouncil.org"
+ Start-ManagedFolderAssistant -Identity "akash@eccouncil.org"
+ Start-ManagedFolderAssistant -Identity "ali@eccouncil.org"
+ Start-ManagedFolderAssistant -Identity "cehapp@eccouncil.org"
+ Start-ManagedFolderAssistant -Identity "danish@eccouncil.org"
+ Start-ManagedFolderAssistant -Identity "entisa@eccouncil.org"
+ Start-ManagedFolderAssistant -Identity "eric.lopez@eccouncil.org"
+ Start-ManagedFolderAssistant -Identity "partnersupport@eccouncil.org"
+ Start-ManagedFolderAssistant -Identity "sachin@eccouncil.org"
+ Start-ManagedFolderAssistant -Identity "jay@eccouncil.org"
+ Start-ManagedFolderAssistant -Identity "urmandeep@eccouncil.org"
+ Start-ManagedFolderAssistant -Identity "steve.graham@eccouncil.org"
+ Start-ManagedFolderAssistant -Identity "finance@eccouncil.org"
+
+
+
+ Set-organizationConfig -AutoExpandingArchive
+ Enable-Mailbox -identity "eric.lopez@eccouncil.org" -Archive
+
+Start-ManagedFolderAssistant -Identity	"eric.lopez@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"heather.richards@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"priyanka.naik@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"rohit.sharma@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"rabbani@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"todd.york@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"entisa@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"swathi.n@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"tintin@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"abhishek.kumar@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"abhishek@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"saba.mohammad@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"Cherylann@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"steve.graham@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"amber.pedroncelli@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"legal@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"anand.j@iibcouncil.org"
+Start-ManagedFolderAssistant -Identity	"david.sanchez@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"jessica.johnson@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"renaldo.h@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"maria.prihartanti@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"lata@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"bhavya@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"hemalatha.l@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"philip.blake@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"erin.gallardo@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"wesley.alvarez@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"johanna.pirolo@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"theranda.spahijaj@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"yanto@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"mirrehman@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"rakesh.acharya@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"sean@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"shobaa.g@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"iclasssupport@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"indiaorders@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"apoorba@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"urmandeep@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"finance@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"trishna@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"sachin@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"akash@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"srinivas.c@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"meghana.vyas@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"rajkumar@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"basant.das@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"jay@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"saifuddin@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"kianfu@eccouncil.org"
+Start-ManagedFolderAssistant -Identity	"fariszuani.mfirdaus@eccouncil.org"
+
+Shared Mail Boxes
+
+Start-ManagedFolderAssistant -Identity "aspensupport@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "aspencert@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "audit@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "certdirector@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "cehapp@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "certmanager@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "certsupport@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "ccisoapp@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "delta@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "ordersupport@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "cnda@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "mycontributions@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "practicals@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "feedback@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "secure@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "lpt@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "leadsupport@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "membersupport@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "techsupport@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "ecsaexam@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "cciso@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "customerservice@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "partnersupport@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "academia@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "info@examspecialists.com"
+Start-ManagedFolderAssistant -Identity "support@examspecialists.com"
+Start-ManagedFolderAssistant -Identity "proctor@examspecialists.com"
+Start-ManagedFolderAssistant -Identity "cyberq@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "cei@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "info@eccouncil.org"
+Start-ManagedFolderAssistant -Identity "masterclass.operations@eccouncil.org"
+
+

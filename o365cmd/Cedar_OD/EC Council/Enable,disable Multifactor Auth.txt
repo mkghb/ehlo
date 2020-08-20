@@ -1,0 +1,14 @@
+For Enable:
+Import-CSv -Path “C:\Users\ladmin\Desktop\New folder\usercsv.csv” | ForEach {
+$UPN=$_.UserPrincipalName 
+$Users=Get-MsolUser -User $UPN
+$Auth= New-Object -TypeName Microsoft.Online.Administration.StrongAuthenticationRequirement
+$Auth.RelyingParty = “*”
+$MFA= @($Auth)
+}
+$Users | Set-MsolUser -StrongAuthenticationRequirements $MFA
+
+For Disable:
+Connect-MSolService
+$mfa = @()
+Set-MsolUser -UserPrincipalName User@domain.com -StrongAuthenticationRequirements $mfa

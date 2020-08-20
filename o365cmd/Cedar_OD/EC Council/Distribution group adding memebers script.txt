@@ -1,0 +1,10 @@
+$credential = Get-Credential
+Import-Module MsOnline 
+Connect-MsolService -Credential $credential
+$exchangeSession = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri "https://outlook.office365.com/powershell-liveid/" -Credential $credential -Authentication "Basic" -AllowRedirection
+Import-PSSession $exchangeSession -DisableNameChecking -allowclobber
+ $Users = Import-Csv C:\Users\karnatia\Desktop\Usermigration.csv
+$Users | foreach {
+Add-DistributionGroupMember -Identity $_.identity -Member $_.members
+}   
+
